@@ -1,1 +1,0 @@
-A repository showing the work I did to build a data processing pipeline based on Pinterest's Experimentation pipeline.
