@@ -25,7 +25,7 @@ default_args = {
 }
 
 
-with DAG('databricks_dag',
+with DAG('0e4c2ab6fb3b_dag',
     # should be a datetime format
     start_date=datetime(2023, 7, 18),
     # check out possible intervals, should be a string
