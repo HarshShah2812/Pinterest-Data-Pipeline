@@ -27,7 +27,7 @@ default_args = {
 
 with DAG('databricks_dag',
     # should be a datetime format
-    start_date=datetime(2023, 7, 17),
+    start_date=datetime(2023, 7, 18),
     # check out possible intervals, should be a string
     schedule_interval='0 */2 * * *',
     catchup=False,
