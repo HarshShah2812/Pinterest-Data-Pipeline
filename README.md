@@ -44,7 +44,7 @@ To create a Kafka topic, you will need to run the following within the `<KAFKA_F
 ```
 ./kafka-topics.sh --bootstrap-server BootstrapServerString --command-config client.properties --create --topic <topic_name>
 ```
-You will see the message "Created topic <topic_name>" if the command runs successfully.
+You will see the message `Created topic <topic_name>` if the command runs successfully.
 
 ## Project Outline
 
