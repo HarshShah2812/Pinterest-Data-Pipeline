@@ -17,27 +17,27 @@ The second pipeline follows the "Extract, Transform, Load" principle (ETL), wher
 - Copy the key-pair associated with your EC2 instance into a file named using the format UserId-key-pair.pem (0e4c2ab6fb3b being my UserId)
 
 - In a terminal, connect to an EC2 instance and start a Confluent server, using the following commands:
-'''
+```
 ssh -i 0e4c2ab6fb3b-key-pair.pem ec2-user@ec2-34-229-53-171.compute-1.amazonaws.com
-'''
-'''
+```
+```
 export CLASSPATH=/home/ec2-user/kafka_2.12-2.8.1/libs/aws-msk-iam-auth-1.1.5-all.jar
-'''
+```
 You can also automate this process by adding the export command to the .bashrc file located in the home directory of the EC2 instance. You can open the file using `nano ~/.bashrc`.\n
-'''
+```
 cd confluent-7.2.0/bin
-'''
-'''
+```
+```
 ./kafka-rest-start /home/ec2-user/confluent-7.2.0/etc/kafka-rest/kafka-rest.properties
-'''
+```
 - In a separate terminal, from your directory, execute the following:
-'''
+```
 python user_posting_emulation_batch.py
-'''
+```
 - If you wish to see the data being sent to the Kafka consumer, you can create and run consumers for each of the Kafka topics by going to the `kafka_2.12-2.8.1/bin` folder and running the following command: 
-'''
+```
 ./kafka-console-consumer.sh --bootstrap-server BootstrapServerString --consumer.config client.properties --group students --topic <topic_name> --from-beginning
-'''
+```
 Replace **BootstrapServerString** with the string you obtain from the client information corresponding to the MSK Cluster on AWS, and **topic_name** with the Kafka topic you've created for each type of record (pin, geo, user), which, for example, will take the format UserId.pin for pin data. You will need to set up separate EC2 instances for each of the consumers.
 
 ## Project Outline
