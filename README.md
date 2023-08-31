@@ -34,11 +34,17 @@ cd confluent-7.2.0/bin
 ```
 python user_posting_emulation_batch.py
 ```
-- If you wish to see the data being sent to the Kafka consumer, you can create and run consumers for each of the Kafka topics by going to the `kafka_2.12-2.8.1/bin` folder and running the following command: 
+- If you wish to see the data being sent to the Kafka consumer, you can create and run consumers for each of the Kafka topics by going to the `<KAFKA_FOLDER>/bin` folder and running the following command: 
 ```
 ./kafka-console-consumer.sh --bootstrap-server BootstrapServerString --consumer.config client.properties --group students --topic <topic_name> --from-beginning
 ```
 Replace **BootstrapServerString** with the string you obtain from the client information corresponding to the MSK Cluster on AWS, and **topic_name** with the Kafka topic you've created for each type of record (pin, geo, user), which, for example, will take the format UserId.pin for pin data. You will need to set up separate EC2 instances for each of the consumers.
+
+To create a Kafka topic, you will need to run the following within the `<KAFKA_FOLDER>/bin` folder, replacing **BootstrapServerString** with the string you obtain from the client information corresponding to the MSK Cluster, and <topic_name> with your desired topic name:
+```
+./kafka-topics.sh --bootstrap-server BootstrapServerString --command-config client.properties --create --topic <topic_name>
+```
+You will see the message "Created topic <topic_name>" if the command runs successfully.
 
 ## Project Outline
 
