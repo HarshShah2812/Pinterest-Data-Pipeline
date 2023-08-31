@@ -94,4 +94,4 @@ I created another notebook called streaming_data_cleaning_and_querying, which re
 
 Here is a flowchart that demonstrates what is happening when both the batch and streaming data pipelines are run:
 
-![Alt text](screenshot_2023-04-20_at_10.10.06-1[7622].png)
+![Flowchart](screenshot_2023-04-20_at_10.10.06-1[7622].png)
