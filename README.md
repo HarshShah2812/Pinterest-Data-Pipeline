@@ -94,4 +94,4 @@ I created another notebook called streaming_data_cleaning_and_querying, which re
 
 Here is a flowchart that demonstrates what is happening when both the batch and streaming data pipelines are run:
 
-![Flowchart](C:\Users\hshah\Desktop\PDP\pinterest-data-pipeline\screenshot_2023-04-20_at_10.10.06-1[7622].png)
+![screenshot_2023-04-20_at_10 10 06-1 7622](https://github.com/HarshShah2812/Pinterest-Data-Pipeline/assets/67421468/01701e26-1fee-4177-b6f5-dfae3e421004)
