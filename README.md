@@ -61,12 +61,12 @@ Finally, I created the Kafka topics: 0e4c2ab6fb3b.pin, 0e4c2ab6fb3b.geo, 0e4c2ab
 ### Milestone 4
 
 I used MSK Connect to connect the MSK cluster to an S3 bucket via the EC2 client. I did this by firstly downloading the Confluent connector and copying it to the S3 bucket (user-0e4c2ab6fb3b-bucket), using the following commands in the EC2 instance:
-'''
+```
 # download connector from Confluent"
 "wget https://d1i4a15mxbxib1.cloudfront.net/api/plugins/confluentinc/kafka-connect-s3/versions/10.0.3/confluentinc-kafka-connect-s3-10.0.3.zip",
 # copy connector to our S3 bucket"
 "aws s3 cp ./confluentinc-kafka-connect-s3-10.0.3.zip s3://user-0e4c2ab6fb3b-bucket/kafka-connect-s3/"
-'''
+```
 I then created a custom plugin in the MSK Connect console, calling it 0e4c2ab6fb3b-plugin.
 
 Next, I created a connector with MSK Connect, calling it 0e4c2ab6fb3b-connector
