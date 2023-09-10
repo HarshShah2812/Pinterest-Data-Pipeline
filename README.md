@@ -96,7 +96,9 @@ In this milestone, I created the streaming data pipeline. Firstly, I used Kinesi
 
 Next, I edited the previous user posting emulation script, calling it user_posting_emulation_streaming, which sends stream data to their corresponding streams in Kinesis.
 
-I created another notebook called streaming_data_cleaning_and_querying, which reads data from the data streams into their corresponding dataframes using structured streaming. I performed transformations on the data in the same way that I did to the batch data, but this time, the data was then saved into Delta tables.
+I created another notebook called streaming_data_cleaning_and_querying, which reads data from the data streams into their corresponding dataframes using structured streaming. I performed transformations on the data in the same way that I did to the batch data, but this time, the data was then saved into Delta tables. Below you can see an example that shows the structure of the Delta table corresponding to Pinterest data:
+
+![pin delta table](https://github.com/HarshShah2812/Pinterest-Data-Pipeline/assets/67421468/f3371307-dcd3-46a2-b6f6-2bf6cb9c476e)
 
 Here is a flowchart that demonstrates what is happening when both the batch and streaming data pipelines are run:
 
