@@ -96,7 +96,7 @@ class UserPostingEmulation():
         data_result: dict
             data from a random row in the pinterest data table
         '''
-        data_string = text(f"SELECT * FROM {record_type} LIMIT {random_row}, 1")
+        data_string = text(f"SELECT * FROM {record_type}_data LIMIT {random_row}, 1")
         data_selected_row = connection.execute(data_string)
 
         for row in data_selected_row:
